@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Subhajit!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to top right, #ffe0ec, #ffc3a0);
+      font-family: 'Roboto', sans-serif;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin-top: 15vh;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      z-index: 2;
+      position: relative;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      animation: fadeIn 3s ease-in-out;
+      z-index: 2;
+      position: relative;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Balloons */
+    .balloon {
+      width: 40px;
+      height: 60px;
+      background-color: #ff6f91;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      bottom: -100px;
+      animation: floatUp 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    .balloon::after {
+      content: '';
+      width: 2px;
+      height: 30px;
+      background: #444;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      20% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% {
+        transform: translateY(-120vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .balloon:nth-child(1) { left: 5%; background-color: #ff6f91; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 20%; background-color: #ff9671; animation-delay: 2s; }
+    .balloon:nth-child(3) { left: 40%; background-color: #f9f871; animation-delay: 4s; }
+    .balloon:nth-child(4) { left: 65%; background-color: #a0e7e5; animation-delay: 1s; }
+    .balloon:nth-child(5) { left: 85%; background-color: #b388eb; animation-delay: 3s; }
+
+    /* Bigger Floating Images */
+    .floating-img {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      animation: floatImage linear infinite;
+      opacity: 0.65;
+      z-index: 1;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: 3px solid #fff;
+    }
+
+    @keyframes floatImage {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      30% { opacity: 0.7; }
+      60% { opacity: 1; }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Image positions & delays */
+    .floating-img:nth-child(6) {
+      left: 10%;
+      background-image: url('1.jpg'); /* Replace with your image */
+      animation-duration: 18s;
+      animation-delay: 0s;
+    }
+    .floating-img:nth-child(7) {
+      left: 35%;
+      background-image: url('2.jpg');
+      animation-duration: 20s;
+      animation-delay: 2s;
+    }
+    .floating-img:nth-child(8) {
+      left: 60%;
+      background-image: url('3.jpg');
+      animation-duration: 22s;
+      animation-delay: 4s;
+    }
+    .floating-img:nth-child(9) {
+      left: 80%;
+      background-image: url('4.jpg');
+      animation-duration: 19s;
+      animation-delay: 1s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <!-- Floating Photos -->
+  <div class="floating-img"></div>
+  <div class="floating-img"></div>
+  <div class="floating-img"></div>
+  <div class="floating-img"></div>
+
+  <!-- Birthday Message -->
+  <h1>🎉 Happy Birthday, Subhajit Sangram! 🎂</h1>
+  <p>Wishing you laughter, joy, and all the best in life.<br>Enjoy your day to the fullest! 💖</p>
+</body>
+</html>
